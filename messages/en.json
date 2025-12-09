@@ -1,0 +1,57 @@
+{
+  "HomePage": {
+    "title": "Hello world!",
+    "about": "Go to the about page"
+  },
+  "NotFoundPage": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist or has been moved.",
+    "goHome": "Go to Homepage"
+  },
+  "ErrorPage": {
+    "title": "Something went wrong!",
+    "description": "An unexpected error has occurred. We apologize for the inconvenience.",
+    "tryAgain": "Try Again",
+    "goHome": "Go to Homepage",
+    "errorCode": "Error Code",
+    "contactSupport": "Contact Support",
+    "supportMessage": "If this problem persists, please contact our support team."
+  },
+  "Common": {
+    "readMore": "Read more",
+    "home": "Home",
+    "publishedAt": "Published",
+    "updatedAt": "Last Updated",
+    "author": "Author",
+    "staff": "Lecturers",
+    "speakers": "Speakers",
+    "location": "Location",
+    "date": "Date",
+    "credits": "Credits",
+    "subjectTypesLegend": "Subject Types Legend",
+    "content": "Content",
+    "industryCode": "Major Code",
+    "studyTime": "Study Time",
+    "admissionPeriod": "Admission Time",
+    "facility": "Facility",
+    "semester": "Semester",
+    "phone": "Phone"
+  },
+  "Footer": {
+    "followUs": "Follow us:",
+    "contactInfo": "Contact Information",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "map": "Map"
+  },
+  "TOC": {
+    "tableOfContents": "Table of Contents"
+  },
+  "RelatedArticles": {
+    "relatedArticles": "Related Articles"
+  },
+  "RelatedEvents": {
+    "relatedEvents": "Related Events"
+  }
+}

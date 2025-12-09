@@ -1,0 +1,57 @@
+{
+  "HomePage": {
+    "title": "Chào thế giới",
+    "about": "Đi đến trang giới thiệu"
+  },
+  "NotFoundPage": {
+    "title": "Không tìm thấy trang",
+    "description": "Trang bạn đang tìm kiếm không tồn tại hoặc đã được chuyển đi.",
+    "goHome": "Về trang chủ"
+  },
+  "ErrorPage": {
+    "title": "Đã xảy ra lỗi!",
+    "description": "Một lỗi không mong muốn đã xảy ra. Chúng tôi xin lỗi vì sự bất tiện này.",
+    "tryAgain": "Thử lại",
+    "goHome": "Về trang chủ",
+    "errorCode": "Mã lỗi",
+    "contactSupport": "Liên hệ hỗ trợ",
+    "supportMessage": "Nếu vấn đề này vẫn tiếp tục, vui lòng liên hệ với đội ngũ hỗ trợ của chúng tôi."
+  },
+  "Common": {
+    "readMore": "Đọc thêm",
+    "home": "Trang chủ",
+    "publishedAt": "Xuất bản",
+    "updatedAt": "Cập nhật lần cuối",
+    "author": "Tác giả",
+    "staff": "Đội ngũ giảng viên",
+    "speakers": "Diễn giả",
+    "location": "Địa điểm",
+    "date": "Ngày",
+    "credits": "Tín chỉ",
+    "subjectTypesLegend": "Chú thích loại môn học",
+    "content": "Nội dung",
+    "industryCode": "Mã ngành",
+    "studyTime": "Thời gian",
+    "admissionPeriod": "Thời gian nhập học",
+    "facility": "Cơ sở",
+    "semester": "Học kỳ",
+    "phone": "Điện thoại"
+  },
+  "Footer": {
+    "followUs": "Theo dõi chúng tôi:",
+    "contactInfo": "Thông tin liên hệ",
+    "address": "Địa chỉ",
+    "phone": "Điện thoại",
+    "email": "Email",
+    "map": "Bản đồ"
+  },
+  "TOC": {
+    "tableOfContents": "Mục lục"
+  },
+  "RelatedArticles": {
+    "relatedArticles": "Bài viết liên quan"
+  },
+  "RelatedEvents": {
+    "relatedEvents": "Sự kiện liên quan"
+  }
+}
