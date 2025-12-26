@@ -38,9 +38,9 @@ export async function generateStaticParams({
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: Locale; articleSlug: string };
+  params: Promise<{ locale: Locale; articleSlug: string }>;
 }): Promise<Metadata> {
-  const { locale, articleSlug } = params;
+  const { locale, articleSlug } = await params;
   const data = await getDetailArticleBySlug(locale, articleSlug);
   const articleData = data.data[0] as ArticlesProps;
   return {

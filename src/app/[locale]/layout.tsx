@@ -24,9 +24,9 @@ const robotoMono = Roboto_Mono({
 export const generateMetadata = async ({
   params,
 }: {
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> => {
-  const { locale } = params;
+  const { locale } = await params;
   const { data } = await getGlobalSetiings(locale);
   return {
     title: data.title,

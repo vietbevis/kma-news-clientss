@@ -33,9 +33,9 @@ export async function generateStaticParams({
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: Locale; username: string };
+  params: Promise<{ locale: Locale; username: string }>;
 }): Promise<Metadata> {
-  const { locale, username } = params;
+  const { locale, username } = await params;
   const data = await getStaffByUsername(locale, username);
   const staffData = data.data[0] as StaffProps;
   return {

@@ -17,9 +17,9 @@ import Sidebar from "./Sidebar";
 export const generateMetadata = async ({
   params,
 }: {
-  params: { locale: Locale; slugEP: string };
+  params: Promise<{ locale: Locale; slugEP: string }>;
 }): Promise<Metadata> => {
-  const { locale, slugEP } = params;
+  const { locale, slugEP } = await params;
   const data = await getDetailEducationalProgram(locale, slugEP);
 
   const pageData = data.data[0];
