@@ -66,7 +66,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({
+export default async function PageSlug({
   params,
 }: {
   params: Promise<{ locale: Locale; pageSlug: string }>;
