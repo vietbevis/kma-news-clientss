@@ -17,9 +17,9 @@ import { notFound } from "next/navigation";
 export const generateStaticParams = async ({
   params,
 }: {
-  params: Promise<{ locale: Locale }>;
+  params: { locale: Locale };
 }) => {
-  const { locale } = await params;
+  const { locale } = params;
   const data = await getAllNavigation(locale);
   return data.data
     .filter(
@@ -37,9 +37,9 @@ export const generateStaticParams = async ({
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: Locale; pageSlug: string }>;
+  params: { locale: Locale; pageSlug: string };
 }): Promise<Metadata> {
-  const { locale, pageSlug } = await params;
+  const { locale, pageSlug } = params;
 
   const data = await getNavigationBySlug(locale, pageSlug);
 

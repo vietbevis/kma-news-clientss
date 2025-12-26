@@ -17,9 +17,9 @@ import Sidebar from "./Sidebar";
 export const generateMetadata = async ({
   params,
 }: {
-  params: Promise<{ locale: Locale; slugEP: string }>;
+  params: { locale: Locale; slugEP: string };
 }): Promise<Metadata> => {
-  const { locale, slugEP } = await params;
+  const { locale, slugEP } = params;
   const data = await getDetailEducationalProgram(locale, slugEP);
 
   const pageData = data.data[0];
@@ -64,9 +64,9 @@ export const generateMetadata = async ({
 export const generateStaticParams = async ({
   params,
 }: {
-  params: Promise<{ locale: Locale }>;
+  params: { locale: Locale };
 }) => {
-  const { locale } = await params;
+  const { locale } = params;
   const data = await getEducationalProgram(locale);
   return data.data.map((item: any) => ({
     slugEP: item.insertToPage.slug,

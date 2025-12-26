@@ -12,18 +12,18 @@ import envConfig from "@/config/env-config";
 import { getListStaff, getStaffByUsername } from "@/data/loader";
 import { StaffProps } from "@/global";
 import { Link } from "@/i18n/navigation";
+import { htmlToText } from "html-to-text";
 import { Metadata } from "next";
 import { Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { htmlToText } from "html-to-text";
 
 export async function generateStaticParams({
   params,
 }: {
-  params: Promise<{ locale: Locale }>;
+  params: { locale: Locale };
 }) {
-  const { locale } = await params;
+  const { locale } = params;
   const data = await getListStaff(locale);
   return data.data.map((item: { username: string }) => ({
     username: item.username,
@@ -33,9 +33,9 @@ export async function generateStaticParams({
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: Locale; username: string }>;
+  params: { locale: Locale; username: string };
 }): Promise<Metadata> {
-  const { locale, username } = await params;
+  const { locale, username } = params;
   const data = await getStaffByUsername(locale, username);
   const staffData = data.data[0] as StaffProps;
   return {

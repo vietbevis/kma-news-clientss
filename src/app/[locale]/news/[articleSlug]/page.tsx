@@ -26,9 +26,9 @@ import { notFound } from "next/navigation";
 export async function generateStaticParams({
   params,
 }: {
-  params: Promise<{ locale: Locale }>;
+  params: { locale: Locale };
 }) {
-  const { locale } = await params;
+  const { locale } = params;
   const data = await getListArticle(locale);
   return data.data.map((item: { slug: string }) => ({
     articleSlug: item.slug,
@@ -38,9 +38,9 @@ export async function generateStaticParams({
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: Locale; articleSlug: string }>;
+  params: { locale: Locale; articleSlug: string };
 }): Promise<Metadata> {
-  const { locale, articleSlug } = await params;
+  const { locale, articleSlug } = params;
   const data = await getDetailArticleBySlug(locale, articleSlug);
   const articleData = data.data[0] as ArticlesProps;
   return {

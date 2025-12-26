@@ -1,6 +1,7 @@
 import Footer from "@/components/layouts/Footer";
 import Header from "@/components/layouts/Header";
 import ScrollTop from "@/components/SrollTop";
+import envConfig from "@/config/env-config";
 import { getGlobalSetiings } from "@/data/loader";
 import { routing } from "@/i18n/routing";
 import { Metadata } from "next";
@@ -9,7 +10,6 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { Roboto, Roboto_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import "../globals.css";
-import envConfig from "@/config/env-config";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -24,9 +24,9 @@ const robotoMono = Roboto_Mono({
 export const generateMetadata = async ({
   params,
 }: {
-  params: Promise<{ locale: Locale }>;
+  params: { locale: Locale };
 }): Promise<Metadata> => {
-  const { locale } = await params;
+  const { locale } = params;
   const { data } = await getGlobalSetiings(locale);
   return {
     title: data.title,
